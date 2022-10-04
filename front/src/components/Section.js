@@ -15,31 +15,34 @@ const Section = () => {
   const id = url.substring(url.lastIndexOf('=') + 1);
 
   const generalInfo = useFetch(`http://localhost:3000/user/${id}`);
-
-  return (
-    <section>
-      <div className="header-section">
-        <h2>
-          Bonjour
-          <span className="red-word">
-            {generalInfo?.data.userInfos.firstName}
-          </span>
-        </h2>
-        <h3>Félicitation ! Vous avez explosé vos objectifs hier 👏</h3>
-      </div>
-      <div className="section-container">
-        <div className="graph-container">
-          <Activities id={id} />
-          <div className="graph-row">
-            <TimeAverage id={id} />
-            <Performance id={id} />
-            <Score id={id} />
-          </div>
+  if (generalInfo) {
+    return (
+      <section>
+        <div className="header-section">
+          <h2>
+            Bonjour
+            <span className="red-word">
+              {generalInfo?.data.userInfos.firstName}
+            </span>
+          </h2>
+          <h3>Félicitation ! Vous avez explosé vos objectifs hier 👏</h3>
         </div>
-        <SideGraph id={id} />
-      </div>
-    </section>
-  );
+        <div className="section-container">
+          <div className="graph-container">
+            <Activities id={id} />
+            <div className="graph-row">
+              <TimeAverage id={id} />
+              <Performance id={id} />
+              <Score id={id} />
+            </div>
+          </div>
+          <SideGraph id={id} />
+        </div>
+      </section>
+    );
+  } else {
+    return <div className="error">404 page not found</div>;
+  }
 };
 // propTypes
 Section.propTypes = {

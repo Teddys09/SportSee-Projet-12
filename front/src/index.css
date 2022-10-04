@@ -5,6 +5,7 @@
 }
 body {
   font-family: 'Roboto', sans-serif;
+  height: 100vh;
 }
 
 /* Banner */
@@ -37,7 +38,7 @@ body {
 .vertical-banner {
   background-color: #020203;
   position: fixed;
-  width: 117px;
+  width: 86px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -49,7 +50,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-bottom: 150px;
+  margin-bottom: 82px;
 }
 .icons-activity img {
   width: 64px;
@@ -64,8 +65,9 @@ body {
 
 /* Section graph */
 section {
-  margin-left: 200px;
-  margin-top: 40px;
+  position: absolute;
+  top: 113px;
+  left: 124px;
 }
 .header-section h2 {
   font-size: 40px;
@@ -78,41 +80,40 @@ section {
 .header-section h3 {
   font-size: 18px;
   font-weight: 400;
-  margin-top: 41px;
-  margin-bottom: 77px;
+  margin-top: 15px;
+  margin-bottom: 24px;
 }
 
 /* Section graph */
 .section-container {
   display: flex;
 
-  gap: 30px;
+  gap: 16px;
 }
 /* Graph Container */
-.graph-container {
-}
+
 .graph-row {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px;
-  gap: 30px;
+  margin-top: 12px;
+  gap: 7px;
 }
 
 /* Performance Graph */
 .performance-container {
-  height: 263px;
+  height: 208px;
   background-color: #282d30;
   border-radius: 5px;
-  width: 258px;
+  width: 200px;
 }
 
 /* Score Graph */
 .score-container {
-  height: 263px;
+  height: 208px;
   background-color: #fbfbfb;
   border-radius: 5px;
   position: relative;
-  width: 258px;
+  width: 200px;
 }
 .score-container h4 {
   font-size: 16px;
@@ -139,10 +140,10 @@ section {
 }
 /* TimeAverage Graph */
 .timeAverage {
-  height: 263px;
+  height: 208px;
   border-radius: 5px;
   background: red;
-  width: 258px;
+  width: 200px;
   position: relative;
 }
 .day-average {
@@ -178,7 +179,7 @@ section {
 
 /* Activities Graph */
 .activities-container {
-  width: 835px;
+  width: 615px;
   background-color: #fbfbfb;
   padding-bottom: 23px;
 }
@@ -256,4 +257,15 @@ section {
 .user-choose {
   text-align: center;
   gap: 10px;
+}
+
+/* Error message */
+.error {
+  color: red;
+  font-size: 40px;
+  font-weight: 500;
+  margin-top: 10px;
+  position: absolute;
+  left: 40%;
+  top: 45%;
 }
