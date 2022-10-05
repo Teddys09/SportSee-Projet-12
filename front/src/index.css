@@ -269,3 +269,11 @@ section {
   left: 40%;
   top: 45%;
 }
+.error-container {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  color: red;
+  display: flex;
+  flex-direction: column;
+}
